@@ -1,0 +1,16 @@
+Options -Indexes
+
+RewriteEngine On
+
+ErrorDocument 404 http://localhost/waste/theme
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_URI} ^/index\.php$ [NC]  
+RewriteRule ^(.*)$ localhost/waste [R=301,L]
+
+
+
+
+
